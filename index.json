@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "name": "lightmind-skills",
+  "skills": [
+    {
+      "name": "browser",
+      "description": "Read a web page, take a screenshot of it, or log in, click and fill forms in a real local browser (Playwright). Use for any task on a website, when plain fetching is not enough (JavaScript, logins), or when the user says \"look at this page\", \"open the site\", \"screenshot the page\".",
+      "path": "skills/browser",
+      "files": [
+        "SKILL.md",
+        "scripts/browser.py"
+      ]
+    },
+    {
+      "name": "delegation",
+      "description": "Split a big task into parts and hand them to parallel worker agents (the built-in tool `spawn`; `lm run --detach` only for runs that must outlive the session), to finish faster and keep the lead's context small without losing quality. Use when a task has several independent parts that each need a lot of reading or work (many files, many pages, research on several topics, code in separate modules), or when the user says \"in parallel\", \"split this up\", \"use several agents\", \"delegate\".",
+      "path": "skills/delegation",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "inquisition",
+      "description": "Plan a larger project or task with the user by interviewing them until every aspect is decided - one focused question at a time, with concrete options, an unconventional option, tradeoffs and a recommendation - tracked in a state file, ending in a full project plan. Use for \"inquisition\", \"plan the project\", \"interview me\", \"grill me\", \"let's plan this through\", or whenever a new project or big feature is still vague.",
+      "path": "skills/inquisition",
+      "files": [
+        "SKILL.md",
+        "references/domains.md",
+        "references/example.md",
+        "references/plan-template.md",
+        "references/research.md",
+        "references/state-template.md"
+      ]
+    },
+    {
+      "name": "programming",
+      "description": "Master rules for writing, changing, fixing and reviewing code - scripts, tools, apps, extensions, bug fixes, refactors, tests. Use for every programming task, also when you delegate one (\"build\", \"write a script\", \"fix the bug\", \"refactor\", \"code review\"). Contains the house rules (comments, style, tests, finishing); pass them on to sub-agents that write code.",
+      "path": "skills/programming",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "skill-creator",
+      "description": "Build a new skill from a plain description - ask what it should do, write the SKILL.md in the correct format (frontmatter, triggers, steps, example), check it with a script and save it under skills/. Use when the user says \"make a skill for ...\", \"create a skill\", \"turn this into a skill\", \"teach yourself to ...\", or wants to save a repeatable way of working.",
+      "path": "skills/skill-creator",
+      "files": [
+        "SKILL.md",
+        "references/skill-template.md",
+        "scripts/check_skill.py"
+      ]
+    },
+    {
+      "name": "triggers",
+      "description": "Schedule an agent to run by itself (daily, weekly, every N minutes) by writing a trigger file and installing it into cron (Linux, macOS) or the Windows Task Scheduler. Use for \"run this every morning\", \"schedule\", \"remind me\", \"cron\".",
+      "path": "skills/triggers",
+      "files": [
+        "SKILL.md",
+        "scripts/apply.py"
+      ]
+    },
+    {
+      "name": "ultracode",
+      "description": "Write and run workflow scripts with the built-in tool `workflow` - one Python script that orchestrates many sub-agents (agent, parallel, pipeline, phase, log, budget, nested workflows, schema answers, git worktrees, resume from the journal). Use for effort ultracode (every substantial task as a workflow), \"ultracode\", \"use a workflow\", \"workflow script\", fan-outs over many files or items, adversarial checks, judge panels, loop-until-dry searches.",
+      "path": "skills/ultracode",
+      "files": [
+        "SKILL.md"
+      ]
+    }
+  ]
+}
